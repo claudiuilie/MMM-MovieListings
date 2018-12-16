@@ -10,18 +10,18 @@ Module.register('MMM-MovieListings', {
 
   // Default module config.
 	defaults: {
-    apiKey: '',
-		region: 'DE',
-    language: 'de-DE',
+    apiKey: '7372a14c46badd53919bce3e1a6c076f',
+		region: 'US',
+    language: 'en-EN',
     interface: 'poster', //'list', 'poster', 'detailed'
-    includeMoviePlot: false,
+    includeMoviePlot: true,
     maxPlotLength: 198,
-    header: 'Kinofilme',
+    header: 'In Cinema',
     moviesPerPage: 0,
     refreshInterval: 1000 * 60 * 60 * 24, //Once a day
     baseUrl: 'https://api.themoviedb.org/3/movie/now_playing',
     animationSpeed: 2.5 * 1000,
-    pageChangeInterval: 30 * 1000
+    pageChangeInterval: 10 * 1000
 	},
 
   getStyles: function() {
