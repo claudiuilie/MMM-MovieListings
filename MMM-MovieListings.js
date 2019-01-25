@@ -21,7 +21,7 @@ Module.register('MMM-MovieListings', {
     refreshInterval: 1000 * 60 * 60 * 24, //Once a day
     baseUrl: 'https://api.themoviedb.org/3/movie/now_playing',
     animationSpeed: 2.5 * 1000,
-    pageChangeInterval: 10 * 1000
+    pageChangeInterval: 15 * 1000
 	},
 
   getStyles: function() {
@@ -49,8 +49,6 @@ Module.register('MMM-MovieListings', {
   },
 
   socketNotificationReceived: function(notification, payload) {
-    Log.log(this.name + ': received socket notification ' + notification + ' with payload:', payload);
-
     if (notification === 'MOVIE_ERROR') {
       Log.log(this.name + ': Error');
     }
